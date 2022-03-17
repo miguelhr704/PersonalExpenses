@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import NavBar from './Components/NavBar'
+import Home from './Components/Home';
+import Login from './Components/Login';
+import SingUp from './Components/SingUp';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [login, setLogin] = useState(true);
+
+
+    if (login) {
+        return (
+            <div className='container'>
+                <div></div>
+                <SingUp />
+            </div>
+        )
+    } else {
+        return (
+            <div class="container2">
+                <Home />
+            </div>
+        )
+    }
+
+
+
 }
 
-export default App;
+export default App
