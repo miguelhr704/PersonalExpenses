@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from './Components/NavBar'
-import Home from './Components/Home';
+import LandingPage from './Components/LandingPage';
 import Login from './Components/Login';
 import SingUp from './Components/SingUp';
+import Home from './Components/Home';
 
 function App() {
     const [login, setLogin] = useState(true);
@@ -11,20 +12,19 @@ function App() {
     if (login) {
         return (
             <div className='container'>
-                <div></div>
-                <SingUp />
+                <div>
+                    <NavBar />
+                </div>
+                <Home />
             </div>
         )
     } else {
         return (
             <div class="container2">
-                <Home />
+                <LandingPage />
             </div>
         )
     }
-
-
-
 }
 
 export default App

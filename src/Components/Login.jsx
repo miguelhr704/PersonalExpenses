@@ -21,7 +21,8 @@ function Login() {
                         </div>
                         <button className='login-container1__btn'>Login</button>
                         <div>
-                            <a href="/" className='login-container1__link'>Register Now</a>
+                            Need an accoutn
+                            <a href="/" className='login-container1__link'> Register Now</a>
                         </div>
 
                     </form>
