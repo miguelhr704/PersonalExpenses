@@ -12,10 +12,11 @@ function App() {
     if (login) {
         return (
             <div className='container'>
-                <div>
-                    <NavBar />
-                </div>
+
+                <NavBar />
+
                 <Home />
+                <div></div>
             </div>
         )
     } else {

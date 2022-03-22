@@ -11,6 +11,7 @@ import LoginIcon from '@mui/icons-material/Login';
 
 function NavBar() {
     return (
+
         <div className='navBar'>
             <div className='navBar-header'>
                 <img src='../../longLogo.png' alt='Logo' className='navBar-Logo' />

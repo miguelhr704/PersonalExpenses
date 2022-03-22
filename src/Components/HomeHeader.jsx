@@ -10,7 +10,6 @@ function HomeHeader() {
                     <p className='home-header__text'>Principal Finances</p>
                     <p className='home-header__text2'>Welcome</p>
                 </div>
-
             </div>
             <div className='home-header__cont'>
                 <img className='home-header__contImg' src="../../gasto.png" alt="spends" srcset="" />
