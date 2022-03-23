@@ -10,9 +10,16 @@ body{
   background: #f1f0f5;
 }
 
+.prueba{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {  
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 14% auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     background-color: #f1f0f5;
@@ -25,11 +32,9 @@ body{
   }
 
   .navBar{
-    position: sticky;
-    top: 0;
-    align-self: start;
+    position: fixed;
     height: 100vh;
-    width: 100%;
+    width: 14%;
     background: white;
     display: flex;
     flex-direction: column;
@@ -37,6 +42,22 @@ body{
     box-shadow: 5px -3px 8px -5px #656565;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    transition: .5s;
+
+  }
+
+  .navBarClose{
+    position: fixed;
+    height: 100vh;
+    width: 4%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px -3px 8px -5px #656565;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .5s;
   }
 
   .navBar-header{
@@ -48,7 +69,47 @@ body{
   .navBar-Logo{
       width: 190px;
       margin-top: 20px;
+      cursor: pointer;
+      animation-name: aper2;
+      animation-duration: 3s;
   }
+
+  @keyframes aper2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .navBar-LogoClose{
+    width: 48px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.navBar-body__itemTextClose p{
+  display: none;
+}
+
+.navBar-footer__itemTextClose p{
+  display: none;
+}
+
+.navBar-body__itemClose:hover{
+  background-color: #0665d1;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.navBar-footer__itemClose:hover{
+  background-color: #0665d1;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
 
   .navBar-body{
     display: flex;
@@ -67,6 +128,31 @@ body{
     margin-bottom: 12px;
   }
 
+  .navBar-body__itemClose{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .navBar-footer__itemClose{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 8px;
+    cursor: pointer;
+    
+  }
+
+  
+
   .navBar-body__itemText{
     width: 100%;
     display: flex;
@@ -75,7 +161,22 @@ body{
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s, .5s;
+  } 
+  
+
+  .navBar-body__itemText p{    
+    animation-name: aper;
+    animation-duration: 2s;
+  }
+
+  @keyframes aper {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .navBar-body__itemText:hover{
@@ -476,6 +577,7 @@ align-items: center;
     gap: 0px 0px;
     grid-auto-flow: column;
     height: 100vh;
+    grid-column-start: 2;
 }
 
 .home-header{
@@ -601,7 +703,7 @@ color: #434343;
 }
 
 .home-body__table   tr:nth-child(even) {
-  background: #cde0f5;
+  background: #e4f1ff;
 }
 .home-body__table tbody  tr:hover {
   background: #a1ccfa;
@@ -624,4 +726,52 @@ align-items: center;
   box-shadow: 2px 2px 6px -5px #656565;
   border-radius: 12px;
   padding: 24px;
+}
+
+.home-footer__contTitle2{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.home-footer__contFixed{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+
+.home-footer__contFixed2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+
+.home-footer__contFixed:hover{
+  background-color: #b2d5fc;
+  border-radius: 20px;
+}
+
+.home-footer__contLogo{
+  width: 45px;
+}
+
+.home-footer__contTitle{
+  font-size: 24px;
+  font-weight: bold;
+  color: #434343;
+  width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 28px;
+}
+
+.home-footer__contPrice{
+  font-weight: bold;
 }

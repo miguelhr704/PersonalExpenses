@@ -8,13 +8,10 @@ import Home from './Components/Home';
 function App() {
     const [login, setLogin] = useState(true);
 
-
     if (login) {
         return (
             <div className='container'>
-
                 <NavBar />
-
                 <Home />
                 <div></div>
             </div>

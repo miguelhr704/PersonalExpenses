@@ -16,7 +16,7 @@ function HomeBody() {
                     </div>
                     <input type="date" name="" id="" className='home-body__contDate' />
                 </div>
-                <div style={{ width: '100%', height: '25rem', overflow: 'scroll' }}>
+                <div style={{ width: '100%', height: '25rem', overflowY: 'scroll' }}>
                     <table className='home-body__table'>
                         <thead>
                             <tr>
